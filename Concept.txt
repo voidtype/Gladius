@@ -1,15 +1,16 @@
 Text version of concept diagram for system. V1
 
-Gladius
+Gladius					There is only 1 gladius, it is a singleton! Contains
+1						Needed global/bookeeping data and not much else.
+|						Perhaps receives P/L info from Broker
 1
-|
-1
-Broker 1--M Data source
-1				||
-|				||
-M			moves down
-Portfolio		||
-M				||
-|				\/
-M
-Securities
+Broker 1--M Data source*There is only one broker. Here the portfolios
+1				||		Are managed and maintained. The broker is
+|				||		Responsible for initializing a dsource and passing 
+M			moves down	Its location down the tree.
+Portfolio		||		Portfolio contains the functions neccesary for
+M				||		Deciding to buy or sell one of its contained stocks.
+|				\/		The signal is posted onto a queue (in broker?) for 
+M						a B/S action.
+Securities				Just a security and its properties as defined by the
+						dsource
