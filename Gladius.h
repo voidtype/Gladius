@@ -1,4 +1,5 @@
 #include <string>
+#include "Broker.h"
 
 class Gladius{
 	public:
@@ -10,4 +11,5 @@ class Gladius{
 		static bool test;
 		Gladius();
 		std::string vers;
+		static Broker* broker;
 };

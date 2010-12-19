@@ -25,4 +25,5 @@ Gladius::get_version(){
 
 Gladius *Gladius::g_instance = 0;
 bool Gladius::test = false;
+Broker* broker = new Broker("joe the broker");
 
