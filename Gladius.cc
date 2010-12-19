@@ -6,10 +6,16 @@ Gladius::Gladius(){
 
 Gladius*
 Gladius::instance(){
-	if(!g_instance)
+	if(!g_instance){
 		g_instance = new Gladius();
+	}
 		//g_instance = const_cast<Gladius*>(new Gladius());
 	return g_instance;
+}
+
+void
+Gladius::set_test(){
+	test = true;
 }
 
 std::string
@@ -18,3 +24,5 @@ Gladius::get_version(){
 }
 
 Gladius *Gladius::g_instance = 0;
+bool Gladius::test = false;
+
